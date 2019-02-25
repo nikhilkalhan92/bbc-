@@ -1,6 +1,6 @@
 # Instructions
 
-You have been given some data by the editorial department in the `data` directory.
+You have been given some data by the editorial department in the `./src/data` directory.
 
 They need you to build an interactive project where users will select an Indian city and have their local air quality displayed in cigarettes and particulate matter.
 
@@ -21,7 +21,7 @@ Some users may have older phones, so please ensure your code works on IE11 and u
 Must have: 
 - Ability for users to choose a country and see air quality in the form of cigarettes and particulate matter (PM2.5)
 - all text fields from the data json file displaying in a logical manner
-- All production files outputted into a `dist` folder ready for making live.
+- All production files outputted into a `./dist` folder ready for making live.
 
 Nice to have:
 - A version in hindi (data also supplied in separate JSON file)
