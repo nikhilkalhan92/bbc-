@@ -33,3 +33,14 @@ We're looking for a logical approach to the work, some creativity, beautiful cod
 
 Don't spend too long on it. 4-8 hours should be enough.
 
+## Help
+
+If you have any issues with this assessment or require some clarification then
+please email your contact at the BBC.
+
+## Submission
+
+Please send your code together with a Readme file explaining how to install/run
+the project and any other notes as a Zip file or a GitHub repository. Please
+also confirm that we have received the test (it may get blocked by spam
+filters).
