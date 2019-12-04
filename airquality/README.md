@@ -19,7 +19,7 @@ Some users may have older phones, so please ensure your code works on IE11 and u
 ## Project requirements
 
 Must have: 
-- Ability for users to choose a country and see air quality in the form of cigarettes and particulate matter (PM2.5)
+- Ability for users to choose a city and see air quality in the form of cigarettes and particulate matter (PM2.5)
 - all text fields from the data json file displaying in a logical manner
 - All production files outputted into a `./dist` folder ready for making live.
 
@@ -29,9 +29,12 @@ Nice to have:
 
 ## What we're looking for
 
-We're looking for a logical approach to the work, some creativity, beautiful code and a nice output. 
+Ideally, we're looking for a logical approach to the work, some creativity, beautiful code and a nice output, but we are not expecting a finished product by a long chalk.
 
-Don't spend too long on it. 4-8 hours should be enough.
+Don't spend too long on it. Try and cap it at 4 hours.
+
+This really is an opportunity for us to see how you think, how you organise yourself, how you express yourself. Have fun!
+
 
 ## Help
 
