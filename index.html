@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,34 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Air quality</title>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="search-input">
-            <input type="text" placeholder="search for city..">
-            <div class="autocom-box">
+            <div class="autocomplete" style="width:300px;">
+                <input id="myInput" type="text" name="myCountry" placeholder="Country">
+            </div>
+            <button onclick="changeLanguage('hindi')">change language</button>
+        </div>
+        <script src="/js/autocomplete.js"></script>
+        <script>
+            let countries;
+            let language = "english";
+            const changeLanguage = (lang) => {
+                language = lang;
+                fetchData();
+            };
 
-            <li>Ghaziabad</li>
-            <li>Noida</li>
-            <li>Dehli</li>
-            <li>Lucknow</li>
-            <li>Gurugrum</li>
-            <li>Faridabad</li>
-            <li>Varanasi</li>
-            <li>Kanpur</li>
-            <li>Kanpur</li>
-            <li>Patna</li>
-            <li>Muzaffarpur</li>
-            <li>Mandi Gobindah</li>
+            const fetchData = () => {
+                fetch(`/airquality/src/data/${language}.json`).then(res => res.json()).then(data => {
+                    const countriesFromData = Object.fromEntries(Object.entries(data).filter(([key]) => key.includes('name')));
+                    countries = Object.values(countriesFromData);
+                    autocomplete(document.getElementById("myInput"), countries);
+                });
+            }
             
-
-            </div>
-
-            <div class="icon" ><i class="fas fa-search"></i> </div>
-
-            </div>
-
-
-            </div>
-    </div>
-    
+            fetchData();
+        </script>
 </body>
+
 </html>
