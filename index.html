@@ -53,31 +53,32 @@
                     const countriesFromData = Object.fromEntries(Object.entries(data).filter(([key]) => key.includes('name')));
                     cities = Object.values(countriesFromData);
                     autocomplete(document.getElementById("myInput"), cities);
-                    console.log(data["article-info_1_byline"]);
-                    // document.getElementById("article-info_1_byline").innerHTML = data["article-info_1_byline"];
-                    // document.getElementById("article-info_1_date").innerHTML = data['article-info_1_date'];
-                    // document.getElementById("article-info_1_category").innerHTML = data['article-info_1_category'];
-                    // document.getElementById("article-info_1_category").innerHTML = data['article-info_1_url'];
-                    // document.getElementById("p_1_value").innerHTML = data['p_1_value'];
-                    // document.getElementById("p_2_value").innerHTML = data['p_2_value'];
-                    // document.getElementById("p_3_value").innerHTML = data['p_3_value'];
-                    // document.getElementById("p_4_value").innerHTML = data['p_4_value'];
-                    // document.getElementById("p_5_value").innerHTML = data['p_5_value'];
-                    // document.getElementById("p_6_value").innerHTML = data['p_6_value'];
-                    // document.getElementById("p_7_value").innerHTML = data['p_7_value'];
-                    // document.getElementById("p_8_value").innerHTML = data['p_8_value'];
-                    // document.getElementById("p_9_value").innerHTML = data['p_9_value'];
-                    // document.getElementById("p_10_value").innerHTML = data['p_10_value'];
+                    document.getElementById("p_1_value").innerHTML = data['p_1_value'];
+                    document.getElementById("p_2_value").innerHTML = data['p_2_value'];
+                    document.getElementById("p_3_value").innerHTML = data['p_3_value'];
+                    document.getElementById("p_4_value").innerHTML = data['p_4_value'];
+                    document.getElementById("p_5_value").innerHTML = data['p_5_value'];
+                    document.getElementById("p_6_value").innerHTML = data['p_6_value'];
+                    document.getElementById("p_7_value").innerHTML = data['p_7_value'];
+                    document.getElementById("p_8_value").innerHTML = data['p_8_value'];
+                    document.getElementById("p_9_value").innerHTML = data['p_9_value'];
+                    document.getElementById("p_10_value").innerHTML = data['p_10_value'];
                     
                     document.getElementById("donutChart").innerHTML = '';
-                    const inputVal = document.getElementById("myInput").value;
-                    const cityKey = Object.keys(data).find(key => data[key] === inputVal);
-                    const numberFromKey = cityKey.match(/\d+/g)[1];
-                    const selectedData = data[`compare-tabs_1_city_${numberFromKey}_aqi`];
-                    const selectedDataNumber = selectedData.split(" ");
-                    const percentage = selectedDataNumber[0] / 300 * 100;
                     var containers = document.getElementsByClassName("chart");
-                    var dial = new Dial(containers[0], percentage,  selectedDataNumber[0]);
+                    const inputVal = document.getElementById("myInput").value;
+
+                    if (inputVal !== '') {
+                        const cityKey = Object.keys(data).find(key => data[key] === inputVal);
+                        const numberFromKey = cityKey.match(/\d+/g)[1];
+                        const selectedData = data[`compare-tabs_1_city_${numberFromKey}_aqi`];
+                        const selectedDataNumber = selectedData.split(" ");
+                        const percentage = selectedDataNumber[0] / 300 * 100;
+                        var dial = new Dial(containers[0], percentage, selectedDataNumber[0]);
+                    } else {
+                        var dial = new Dial(containers[0], 0, 0);
+                    }
+
                     dial.animateStart();
                 });
 
