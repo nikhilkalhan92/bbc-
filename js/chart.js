@@ -21,7 +21,6 @@ Dial.prototype.create = function() {
     this.createSlice();
     this.createOverlay();
     this.createText();
-    this.createArrow();
     this.container.appendChild(this.svg);
 };
 
@@ -87,7 +86,6 @@ Dial.prototype.createText = function() {
     var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     text.setAttribute('x', (this.size / 2) + fontSize / 7.5);
     text.setAttribute('y', (this.size / 2) + fontSize / 4);
-    text.setAttribute('font-family', 'Century Gothic, Lato');
     text.setAttribute('font-size', fontSize);
     text.setAttribute('fill', '#78F8EC');
     text.setAttribute('text-anchor', 'middle');
@@ -95,29 +93,6 @@ Dial.prototype.createText = function() {
     text.innerHTML = 0 + '<tspan font-size="' + tspanSize + '" dy="' + -tspanSize * 1.2 + '">%</tspan>';
     this.svg.appendChild(text);
     this.text = text;
-};
-
-Dial.prototype.createArrow = function() {
-    var arrowSize = this.size / 10;
-    var arrowYOffset, m;
-    if(this.direction === 'up') {
-        arrowYOffset = arrowSize / 2;
-        m = -1;
-    }
-    else if(this.direction === 'down') {
-        arrowYOffset = 0;
-        m = 1;
-    }
-    var arrowPosX = ((this.size / 2) - arrowSize / 2);
-    var arrowPosY = (this.size - this.size / 3) + arrowYOffset;
-    var arrowDOffset =  m * (arrowSize / 1.5);
-    var arrow = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    arrow.setAttribute('d', 'M 0 0 ' + arrowSize + ' 0 ' + arrowSize / 2 + ' ' + arrowDOffset + ' 0 0 Z');
-    arrow.setAttribute('fill', '#97F8F0');
-    arrow.setAttribute('opacity', '0.6');
-    arrow.setAttribute('transform', 'translate(' + arrowPosX + ',' + arrowPosY + ')');
-    this.svg.appendChild(arrow);
-    this.arrow = arrow;
 };
 
 Dial.prototype.animateStart = function(value) {
@@ -166,6 +141,6 @@ Dial.prototype.setValue = function(value) {
 		var xy = this.size / 2 - this.strokeWidth / 2;
 		var d = this.describeArc(xy, xy, xy, 180, 180 + c);
     this.slice.setAttribute('d', d);
-    var tspanSize = (this.size / 3.5) / 3;
-    this.text.innerHTML = this.number + '<tspan font-size="' + tspanSize + '" dy="' + -tspanSize * 1.2 + '"></tspan>';
+    var tspanSize = (this.size / 3.5) / 6;
+    this.text.innerHTML = this.number + '<tspan font-size="' + tspanSize + '" dy="' + -tspanSize * 1.2 + '"><tspan padding-right:"10px"> PM2.5</tspan></tspan>';
 };
