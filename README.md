@@ -1,8 +1,9 @@
 ## Air Pollution ##
 
-Hi - welcome to my project based on airt pollution in various cities across india.
+Hi - welcome to my project based on air pollution in various cities across india.
 
 My thought process was first I needed to do an autocomplete and chart to present the results. The whole project using HTTML5/CSS3 and JS. I also needed to design the home page to be easy to use and read.
+
 
 Homepage
 
@@ -12,13 +13,19 @@ Homepage
 
 ## How to use ##
 
-1) Type any given city from India, and the results of the air pollution levels will be shown via a donut graphic on the front screen
+1) Type any given city from India, and the results of the air pollution levels will be shown via a donut graphic on the front screen.
+
+- Please type any Indian city, and you'll see the results of the air pollution level. Please click submit.
 
 ![city](/images/cityexample.png)
 
 2) Option to change language and read the information in Hindi . Please select change language on the front screen and click it again to go back to english. 
 
 ![hindiversion](/images/hindiversion.png)
+
+3) City pollution levels in Hindi
+
+![searchindian](/images/searchindian.png)
 
 
 
