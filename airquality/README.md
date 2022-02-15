@@ -2,13 +2,23 @@
 
 Hi - welcome to my project based on airt pollution in various cities across india.
 
-My thought process was first I needed to do an autocomplete and chart to present the results. The whole project using HTTML5/CSS3 and JS. I also needed to design the home page to be easy to use and read. I have also included auto c
+My thought process was first I needed to do an autocomplete and chart to present the results. The whole project using HTTML5/CSS3 and JS. I also needed to design the home page to be easy to use and read.
+
+Homepage
+
+![homepage](/images/homepage.png)
+
+
 
 ## How to use ##
 
 1) Type any given city from India, and the results of the air pollution levels will be shown via a donut graphic on the front screen
 
+![city](/images/cityexample.png)
+
 2) Option to change language and read the information in Hindi . Please select change language on the front screen and click it again to go back to english. 
+
+![hindiversion](/images/hindiversion.png)
 
 3) 
 
