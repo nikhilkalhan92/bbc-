@@ -13,11 +13,13 @@
     <div class="wrapper">
         <div class="search-input">
             <div class="autocomplete" style="width:300px;">
-                <input id="myInput" type="text" name="myCountry" placeholder="Country">
+                <input id="myInput" type="text" name="myCountry" placeholder="Select a city">
+                <input type="submit" onclick="fetchData()">
             </div>
-            <input type="submit" onclick="fetchData()">
         </div>
-        <button onclick="changeLanguage(language === 'english' ? 'hindi' : 'english')">change language</button>
+        <div class="change-language">
+            <input type="submit" onclick="changeLanguage(language === 'english' ? 'hindi' : 'english')" value="Change language"/>
+        </div>
         <div class="chart-wrapper">
 			<div id="donutChart" class="container chart" data-size="400" data-value="88" data-arrow="up">
 			</div>

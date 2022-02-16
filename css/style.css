@@ -4,7 +4,16 @@ body {
     background: #18222F;
     color:#ffffff;
 }
-
+.search-input {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.change-language {
+  position: absolute;
+  top: 28px;
+  right: 20px;
+}
 .chart-wrapper {
    width: 400px;
    margin: 0 auto;
@@ -23,6 +32,8 @@ input {
 input[type=text] {
   background-color: #f1f1f1;
   width: 100%;
+  width: 61%;
+  display: inline-block;
 }
 input[type=submit] {
   background-color: DodgerBlue;
@@ -38,6 +49,7 @@ input[type=submit] {
   top: 100%;
   left: 0;
   right: 0;
+  color: #000;
 }
 .autocomplete-items div {
   padding: 10px;
