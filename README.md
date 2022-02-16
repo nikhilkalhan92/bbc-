@@ -17,15 +17,17 @@ Homepage
 
 - Please type any Indian city, and you'll see the results of the air pollution level. Please click submit.
 
-![city](/images/cityexample.png)
+![workedexample](/images/workedexample.png)
 
 2) Option to change language and read the information in Hindi . Please select change language on the front screen and click it again to go back to english. 
 
-![hindiversion](/images/hindiversion.png)
+![hindi](//images/hindi.png)
 
 3) City pollution levels in Hindi
 
-![searchindian](/images/searchindian.png)
+![workedexampleindia](/images/wokredexampleindia.png)
+
+
 
 Many Thanks
 
