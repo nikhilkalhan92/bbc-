@@ -21,7 +21,7 @@ Homepage
 
 2) Option to change language and read the information in Hindi . Please select change language on the front screen and click it again to go back to english. 
 
-![hindi](//images/hindi.png)
+![hindi](/images/hindi.png)
 
 3) City pollution levels in Hindi
 
